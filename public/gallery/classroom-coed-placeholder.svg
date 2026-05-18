@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#grid)"/>
+  <circle cx="1300" cy="300" r="260" fill="rgba(251,191,36,0.18)" filter="blur(40px)"/>
+  <circle cx="300" cy="900" r="320" fill="rgba(96,165,250,0.25)" filter="blur(60px)"/>
+  <g transform="translate(800 500)" text-anchor="middle">
+    <rect x="-180" y="-30" width="360" height="60" rx="30" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+    <text y="10" font-family="'Poppins',Arial,sans-serif" font-weight="700" font-size="26" fill="#fde68a" letter-spacing="3">CO-ED CBSE BATCH</text>
+  </g>
+  <text x="800" y="640" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="800" font-size="68" fill="#ffffff" letter-spacing="2">SURE SUCCESS</text>
+  <text x="800" y="700" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="600" font-size="30" fill="#fde68a" letter-spacing="6">COACHING CENTRE</text>
+  <text x="800" y="820" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="400" font-size="20" fill="rgba(255,255,255,0.45)">Replace with classroom-coed.jpg</text>
+</svg>

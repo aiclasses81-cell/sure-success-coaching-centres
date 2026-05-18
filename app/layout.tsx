@@ -82,7 +82,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
               name: siteConfig.name,
-              image: "https://suresuccesscoaching.in/og.jpg",
+              image: "https://suresuccesscoaching.in/logo.svg",
+              logo: "https://suresuccesscoaching.in/logo.svg",
               url: "https://suresuccesscoaching.in",
               telephone: siteConfig.phones,
               address: {

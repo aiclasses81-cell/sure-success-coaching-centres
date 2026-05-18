@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1f4d"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <circle cx="600" cy="500" r="260" fill="rgba(251,191,36,0.12)" filter="blur(60px)"/>
+
+  <!-- Avatar silhouette -->
+  <g transform="translate(600 600)">
+    <circle r="170" fill="rgba(255,255,255,0.08)" stroke="url(#gold)" stroke-width="3"/>
+    <circle cy="-30" r="70" fill="rgba(255,255,255,0.85)"/>
+    <path d="M -120 130 C -120 60, -60 30, 0 30 C 60 30, 120 60, 120 130 L 120 170 L -120 170 Z" fill="rgba(255,255,255,0.85)"/>
+  </g>
+
+  <!-- Nameplate -->
+  <g transform="translate(600 920)">
+    <rect x="-220" y="-40" width="440" height="80" rx="10" fill="url(#gold)"/>
+    <text y="14" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="800" font-size="36" fill="#0b1f4d" letter-spacing="6">S.S.C.C.</text>
+  </g>
+
+  <text x="600" y="1080" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="700" font-size="42" fill="#ffffff" letter-spacing="2">Director's Office</text>
+  <text x="600" y="1130" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="500" font-size="22" fill="rgba(255,255,255,0.6)">Sure Success Coaching Centre</text>
+  <text x="600" y="1200" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="400" font-size="18" fill="rgba(255,255,255,0.4)">Replace with director.jpg</text>
+</svg>

@@ -4,41 +4,42 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
+import { media } from "@/lib/site";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80",
-    alt: "Students attentively learning in a classroom",
+    src: media.classroomBoys,
+    alt: "Senior batch students in navy SSCC polos taking a test",
     span: "lg:col-span-2 lg:row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
-    alt: "Mathematics on chalkboard",
+    src: media.classroomCoed,
+    alt: "Co-ed CBSE batch writing a class test",
   },
   {
-    src: "https://images.unsplash.com/photo-1509869175650-a1d97972541a?auto=format&fit=crop&w=900&q=80",
-    alt: "Teacher explaining science concept",
+    src: media.director,
+    alt: "Director's office at Sure Success Coaching Centre",
   },
   {
-    src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=900&q=80",
-    alt: "Students taking notes",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
-    alt: "Group study session",
+    src: media.foundationBatch,
+    alt: "Foundation batch students during a written test",
     span: "lg:col-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=900&q=80",
-    alt: "Modern classroom interior",
+    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+    alt: "Mathematics on the chalkboard",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1509869175650-a1d97972541a?auto=format&fit=crop&w=900&q=80",
+    alt: "Teacher explaining a science concept",
   },
   {
     src: "https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&w=900&q=80",
-    alt: "Books and laptop on desk",
+    alt: "Books and study materials on a desk",
   },
   {
     src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=900&q=80",
-    alt: "Student writing exam",
+    alt: "Student writing during an exam",
   },
 ];
 

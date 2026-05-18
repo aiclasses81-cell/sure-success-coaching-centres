@@ -23,6 +23,20 @@ export const siteConfig = {
   },
 };
 
+/**
+ * Centralized image paths.
+ *
+ * To swap a placeholder for the real photo, drop the JPG into
+ * `public/gallery/` (e.g. `classroom-boys.jpg`) and replace the
+ * `-placeholder.svg` ending with `.jpg` in the path below.
+ */
+export const media = {
+  classroomBoys: "/gallery/classroom-boys-placeholder.svg",
+  classroomCoed: "/gallery/classroom-coed-placeholder.svg",
+  director: "/gallery/director-placeholder.svg",
+  foundationBatch: "/gallery/foundation-batch-placeholder.svg",
+};
+
 export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },

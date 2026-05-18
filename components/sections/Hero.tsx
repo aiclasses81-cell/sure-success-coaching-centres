@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, ArrowRight, Star, Users, Award, BookOpen } from "lucide-react";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, media } from "@/lib/site";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -151,8 +151,8 @@ export default function Hero() {
         >
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-card ring-1 ring-slate-100">
             <Image
-              src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80"
-              alt="Students in classroom at Sure Success Coaching Centre"
+              src={media.classroomBoys}
+              alt="Students in their navy SSCC polos taking a test at Sure Success Coaching Centre, Anisabad Patna"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 40vw"

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#grid)"/>
+  <circle cx="400" cy="300" r="280" fill="rgba(251,191,36,0.2)" filter="blur(60px)"/>
+  <circle cx="1300" cy="900" r="320" fill="rgba(255,255,255,0.08)" filter="blur(50px)"/>
+  <g transform="translate(800 500)" text-anchor="middle">
+    <rect x="-200" y="-30" width="400" height="60" rx="30" fill="#fbbf24"/>
+    <text y="12" font-family="'Poppins',Arial,sans-serif" font-weight="800" font-size="26" fill="#0b1f4d" letter-spacing="4">FOUNDATION BATCH</text>
+  </g>
+  <text x="800" y="640" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="800" font-size="68" fill="#ffffff" letter-spacing="2">SURE SUCCESS</text>
+  <text x="800" y="700" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="600" font-size="28" fill="#fde68a" letter-spacing="6">CLASSES VI · VII · VIII</text>
+  <text x="800" y="820" text-anchor="middle" font-family="'Poppins',Arial,sans-serif" font-weight="400" font-size="20" fill="rgba(255,255,255,0.45)">Replace with foundation-batch.jpg</text>
+</svg>

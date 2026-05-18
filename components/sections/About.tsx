@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   ClipboardCheck,
 } from "lucide-react";
+import { media } from "@/lib/site";
 
 const pillars = [
   {
@@ -47,8 +48,8 @@ export default function About() {
           <div className="relative grid grid-cols-5 grid-rows-6 gap-3 h-[460px] sm:h-[520px]">
             <div className="relative col-span-3 row-span-4 rounded-3xl overflow-hidden shadow-card">
               <Image
-                src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=900&q=80"
-                alt="Director of Sure Success Coaching Centre"
+                src={media.director}
+                alt="Director of Sure Success Coaching Centre at his office desk"
                 fill
                 sizes="(max-width: 1024px) 60vw, 25vw"
                 className="object-cover"
@@ -56,8 +57,8 @@ export default function About() {
             </div>
             <div className="relative col-span-2 row-span-3 rounded-3xl overflow-hidden shadow-soft">
               <Image
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80"
-                alt="Books and study material"
+                src={media.classroomCoed}
+                alt="Co-ed CBSE batch writing a class test at Sure Success"
                 fill
                 sizes="(max-width: 1024px) 40vw, 16vw"
                 className="object-cover"
@@ -65,8 +66,8 @@ export default function About() {
             </div>
             <div className="relative col-span-2 row-span-3 rounded-3xl overflow-hidden shadow-soft">
               <Image
-                src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=700&q=80"
-                alt="Classroom whiteboard"
+                src={media.foundationBatch}
+                alt="Foundation batch students of Sure Success Coaching Centre"
                 fill
                 sizes="(max-width: 1024px) 40vw, 16vw"
                 className="object-cover"
@@ -74,8 +75,8 @@ export default function About() {
             </div>
             <div className="relative col-span-3 row-span-2 rounded-3xl overflow-hidden shadow-soft">
               <Image
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
-                alt="Students learning together"
+                src={media.classroomBoys}
+                alt="Senior batch students at Sure Success Coaching Centre, Anisabad Patna"
                 fill
                 sizes="(max-width: 1024px) 60vw, 25vw"
                 className="object-cover"

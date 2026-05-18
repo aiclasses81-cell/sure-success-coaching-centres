@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { GraduationCap } from "lucide-react";
-import { siteConfig } from "@/lib/site";
+import Image from "next/image";
 
 export default function Logo({
   variant = "dark",
@@ -10,10 +9,16 @@ export default function Logo({
   const text = variant === "light" ? "text-white" : "text-slate-900";
   const sub = variant === "light" ? "text-brand-100" : "text-brand-700";
   return (
-    <Link href="#home" className="flex items-center gap-2.5 group">
-      <span className="relative grid place-items-center w-10 h-10 rounded-xl bg-gradient-to-br from-brand-600 to-brand-900 shadow-card overflow-hidden">
-        <GraduationCap className="w-5 h-5 text-white relative z-10" />
-        <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-accent-400 ring-2 ring-white" />
+    <Link href="#home" className="flex items-center gap-2.5 group" aria-label="Sure Success Coaching Centre - Home">
+      <span className="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
+        <Image
+          src="/logo.svg"
+          alt="Sure Success Coaching Centre logo"
+          fill
+          priority
+          sizes="48px"
+          className="object-contain drop-shadow-[0_4px_10px_rgba(30,64,175,0.25)]"
+        />
       </span>
       <span className="leading-tight">
         <span

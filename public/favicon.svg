@@ -1,11 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SSCC">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#2563eb"/>
-      <stop offset="100%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0b1f4d"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#d97706"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <path d="M32 12l4 8 9 1.5-6.5 6.4 1.5 9L32 32.5 23.9 36.9l1.6-9L19 21.5 28 20l4-8z" fill="#fbbf24"/>
-  <text x="32" y="56" text-anchor="middle" fill="#fff" font-family="Poppins, sans-serif" font-weight="800" font-size="14">SS</text>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <path d="M32 11 L34.6 18 L42 18.6 L36.3 23.2 L38 30.4 L32 26.6 L26 30.4 L27.7 23.2 L22 18.6 L29.4 18 Z"
+        fill="url(#gold)"/>
+  <text x="32" y="50" text-anchor="middle"
+        font-family="'Poppins','Helvetica Neue',Arial,sans-serif"
+        font-weight="800" font-size="14" letter-spacing="1"
+        fill="#fff">SSCC</text>
 </svg>
