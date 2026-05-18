@@ -1,28 +1,37 @@
 # Institute Photos
 
-Drop the **real** institute JPEGs into this folder using the exact filenames below.
+Drop your **real** institute JPGs into this folder using the exact filenames
+below. The site will pick them up automatically — no code changes needed.
 
-| Filename | Used in | Description |
-|---|---|---|
-| `classroom-boys.jpg` | Hero (right card), Gallery (large tile) | Senior boys' batch in navy SSCC polos, mid-test |
-| `classroom-coed.jpg` | About collage (top-right), Gallery | Co-ed batch with girls in front rows, written test |
-| `director.jpg` | About collage (main portrait) | Founder/Director seated at S.S.C.C. desk |
-| `foundation-batch.jpg` | About collage (bottom-right), Gallery | Younger Foundation co-ed batch, casual wear |
+| Filename               | Used in                                             |
+| ---------------------- | --------------------------------------------------- |
+| `classroom-1.jpg`      | **Hero background** + Gallery (large tile) — pick the strongest classroom photo |
+| `classroom-2.jpg`      | About collage (top-right) + Gallery                 |
+| `classroom-3.jpg`      | About collage (main portrait) + Gallery — director  |
+| `classroom-4.jpg`      | About collage (bottom-right) + Gallery (wide tile)  |
+| `classroom-5.jpg`      | Gallery                                             |
+| `classroom-6.jpg`      | Gallery                                             |
 
-## How to swap placeholders for the real photos
+## How the swap works
 
-1. Save your 4 photos into this folder using the **exact filenames** above.
-2. Open `lib/site.ts` and in the `media` block, change each placeholder path
-   from `/gallery/<name>-placeholder.svg` to `/gallery/<name>.jpg`. Example:
+1. Save the JPGs into this folder using the filenames above.
+2. Open `lib/site.ts` and in the `galleryImages` array change each `src`
+   from `-placeholder.svg` to `.jpg` — for example:
 
    ```ts
-   classroomBoys: "/gallery/classroom-boys.jpg",
+   { src: "/gallery/classroom-1.jpg", alt: "...", caption: "...", featured: true }
    ```
 
-That's it — the photos will appear in Hero, About, and Gallery automatically.
+3. Save. The Hero background, About collage, and Gallery all update.
 
-### Recommended specs
+## Recommended specs
 
-- **Format:** JPG (preferred) or WebP
-- **Width:** 1600 px or larger (Next.js will auto-resize for each device)
-- **Quality:** 80–85 (keep under ~400 KB per image for fast loading)
+- **Format:** JPG (preferred) or WebP.
+- **Width:** 1600 px or larger — Next/Image automatically generates
+  responsive sizes for every device.
+- **Quality:** 80–85 (keep each file under ~400 KB for fast loading).
+
+## Until your JPGs are in place
+
+Each filename has a branded blue SVG placeholder of the same name, so the
+site renders intentional placeholder cards (not broken icons).

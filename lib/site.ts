@@ -24,27 +24,81 @@ export const siteConfig = {
 };
 
 /**
- * Brand logo path.
- *
- * The repository ships with a faithful vector recreation of the institute
- * logo at `/logo.svg` (lotus + book + wings + ribbon). To use a raster PNG
- * instead, drop your file at `public/logo.png` and change this to
- * `"/logo.png"`. Both formats are handled by `<Image />` automatically.
+ * Brand logo path. Single source of truth for navbar, footer, favicon
+ * and JSON-LD/OpenGraph metadata. Drop a `public/logo.png` and change
+ * this to `"/logo.png"` to switch to a raster file.
  */
 export const logoSrc = "/logo.svg";
 
 /**
- * Centralized image paths for institute photos.
+ * ============================================================================
+ *                         GALLERY PHOTOS (drop-in)
+ * ============================================================================
  *
- * To swap a placeholder for the real photo, drop the JPG into
- * `public/gallery/` (e.g. `classroom-boys.jpg`) and replace the
- * `-placeholder.svg` ending with `.jpg` in the path below.
+ * To use the institute's actual photos:
+ *   1. Save your JPGs into `public/gallery/` using these exact filenames:
+ *        classroom-1.jpg  ...  classroom-6.jpg
+ *   2. Change each `src` below from `-placeholder.svg` to `.jpg`. That's it.
+ *
+ * Each entry's caption appears on hover and inside the lightbox.
+ * Set `featured: true` on the photo you want as the hero background.
  */
+export type GalleryImage = {
+  src: string;
+  alt: string;
+  caption: string;
+  /** Optional bento-grid sizing override (Tailwind classes) */
+  span?: string;
+  /** If true, this image is also used as the Hero background */
+  featured?: boolean;
+};
+
+export const galleryImages: GalleryImage[] = [
+  {
+    src: "/gallery/classroom-1-placeholder.svg",
+    alt: "Senior batch students at Sure Success Coaching Centre writing a class test",
+    caption: "Senior Batch · CBSE Board Test",
+    span: "lg:col-span-2 lg:row-span-2",
+    featured: true,
+  },
+  {
+    src: "/gallery/classroom-2-placeholder.svg",
+    alt: "Co-ed CBSE batch in navy SSCC polos during a written test",
+    caption: "Co-ed CBSE Batch",
+  },
+  {
+    src: "/gallery/classroom-3-placeholder.svg",
+    alt: "Director of Sure Success Coaching Centre at his office",
+    caption: "Director's Office",
+  },
+  {
+    src: "/gallery/classroom-4-placeholder.svg",
+    alt: "Foundation batch students at Sure Success Coaching Centre",
+    caption: "Foundation Batch",
+    span: "lg:col-span-2",
+  },
+  {
+    src: "/gallery/classroom-5-placeholder.svg",
+    alt: "Class IX-X session at Sure Success Coaching Centre",
+    caption: "Class IX-X · CBSE",
+  },
+  {
+    src: "/gallery/classroom-6-placeholder.svg",
+    alt: "Test prep session at Sure Success Coaching Centre, Anisabad Patna",
+    caption: "Test Prep Session",
+  },
+];
+
+/** Hero background = the first featured image, or the first image overall. */
+export const heroBackground =
+  galleryImages.find((g) => g.featured) ?? galleryImages[0];
+
+/** Convenience aliases used by Hero/About sections (kept stable for back-compat) */
 export const media = {
-  classroomBoys: "/gallery/classroom-boys-placeholder.svg",
-  classroomCoed: "/gallery/classroom-coed-placeholder.svg",
-  director: "/gallery/director-placeholder.svg",
-  foundationBatch: "/gallery/foundation-batch-placeholder.svg",
+  classroomBoys: galleryImages[0].src,
+  classroomCoed: galleryImages[1].src,
+  director: galleryImages[2].src,
+  foundationBatch: galleryImages[3].src,
 };
 
 export const navLinks = [
