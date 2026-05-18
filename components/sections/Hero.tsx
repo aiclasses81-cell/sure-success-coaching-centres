@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Phone,
@@ -13,6 +12,7 @@ import {
   ShieldCheck,
   Trophy,
 } from "lucide-react";
+import SmartImage from "@/components/SmartImage";
 import { siteConfig, heroBackground } from "@/lib/site";
 
 const fadeUp = {
@@ -32,14 +32,15 @@ export default function Hero() {
     >
       {/* ============ Background image ============ */}
       <div className="absolute inset-0 -z-10">
-        <Image
+        <SmartImage
           src={heroBackground.src}
+          fallbackSrc={heroBackground.fallback}
           alt={heroBackground.alt}
           fill
           priority
           quality={85}
           sizes="100vw"
-          className="object-cover scale-105 motion-safe:animate-[heroZoom_30s_ease-in-out_infinite_alternate]"
+          className="object-cover object-center scale-105 motion-safe:animate-[heroZoom_30s_ease-in-out_infinite_alternate]"
         />
         {/* Layered dark gradients for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-950/95 via-brand-900/85 to-brand-700/70" />

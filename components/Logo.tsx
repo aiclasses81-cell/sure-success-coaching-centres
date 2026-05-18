@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import SmartImage from "./SmartImage";
 import { logoSrc, siteConfig } from "@/lib/site";
 
 type LogoProps = {
@@ -34,7 +34,7 @@ export default function Logo({
       <span
         className={`relative ${sizeMap[size]} aspect-[5/4] shrink-0 transition-transform duration-300 group-hover:scale-[1.04]`}
       >
-        <Image
+        <SmartImage
           src={logoSrc}
           alt={`${siteConfig.name} logo`}
           fill

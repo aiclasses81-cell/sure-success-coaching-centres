@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -10,6 +9,7 @@ import {
   Maximize2,
   Camera,
 } from "lucide-react";
+import SmartImage from "@/components/SmartImage";
 import { galleryImages } from "@/lib/site";
 
 export default function Gallery() {
@@ -110,12 +110,13 @@ export default function Gallery() {
                 img.span ?? ""
               }`}
             >
-              <Image
+              <SmartImage
                 src={img.src}
+                fallbackSrc={img.fallback}
                 alt={img.alt}
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
+                className="object-cover object-center transition-transform duration-[900ms] ease-out group-hover:scale-110"
               />
               {/* gradient + caption overlay */}
               <span className="absolute inset-0 bg-gradient-to-t from-brand-950/85 via-brand-950/20 to-transparent opacity-70 group-hover:opacity-100 transition-opacity" />
@@ -214,12 +215,13 @@ export default function Gallery() {
               className="relative w-full max-w-6xl aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl shadow-black/60 ring-1 ring-white/10"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
+              <SmartImage
                 src={galleryImages[active].src}
+                fallbackSrc={galleryImages[active].fallback}
                 alt={galleryImages[active].alt}
                 fill
                 sizes="100vw"
-                className="object-cover"
+                className="object-contain object-center bg-slate-900"
                 priority
               />
               {/* Caption pill */}

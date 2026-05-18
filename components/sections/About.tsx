@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   GraduationCap,
@@ -8,6 +7,7 @@ import {
   ShieldCheck,
   ClipboardCheck,
 } from "lucide-react";
+import SmartImage from "@/components/SmartImage";
 import { media } from "@/lib/site";
 
 const pillars = [
@@ -47,39 +47,43 @@ export default function About() {
         >
           <div className="relative grid grid-cols-5 grid-rows-6 gap-3 h-[460px] sm:h-[520px]">
             <div className="relative col-span-3 row-span-4 rounded-3xl overflow-hidden shadow-card">
-              <Image
-                src={media.director}
-                alt="Director of Sure Success Coaching Centre at his office desk"
+              <SmartImage
+                src={media.director.src}
+                fallbackSrc={media.director.fallback}
+                alt={media.director.alt}
                 fill
                 sizes="(max-width: 1024px) 60vw, 25vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
             <div className="relative col-span-2 row-span-3 rounded-3xl overflow-hidden shadow-soft">
-              <Image
-                src={media.classroomCoed}
-                alt="Co-ed CBSE batch writing a class test at Sure Success"
+              <SmartImage
+                src={media.classroomCoed.src}
+                fallbackSrc={media.classroomCoed.fallback}
+                alt={media.classroomCoed.alt}
                 fill
                 sizes="(max-width: 1024px) 40vw, 16vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
             <div className="relative col-span-2 row-span-3 rounded-3xl overflow-hidden shadow-soft">
-              <Image
-                src={media.foundationBatch}
-                alt="Foundation batch students of Sure Success Coaching Centre"
+              <SmartImage
+                src={media.foundationBatch.src}
+                fallbackSrc={media.foundationBatch.fallback}
+                alt={media.foundationBatch.alt}
                 fill
                 sizes="(max-width: 1024px) 40vw, 16vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
             <div className="relative col-span-3 row-span-2 rounded-3xl overflow-hidden shadow-soft">
-              <Image
-                src={media.classroomBoys}
-                alt="Senior batch students at Sure Success Coaching Centre, Anisabad Patna"
+              <SmartImage
+                src={media.classroomBoys.src}
+                fallbackSrc={media.classroomBoys.fallback}
+                alt={media.classroomBoys.alt}
                 fill
                 sizes="(max-width: 1024px) 60vw, 25vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
           </div>
@@ -91,7 +95,7 @@ export default function About() {
             </div>
             <div>
               <p className="font-display font-bold text-slate-900 text-sm">
-                Director's Note
+                Director&apos;s Note
               </p>
               <p className="text-xs text-slate-500">
                 10+ years guiding students
