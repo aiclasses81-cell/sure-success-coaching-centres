@@ -24,7 +24,17 @@ export const siteConfig = {
 };
 
 /**
- * Centralized image paths.
+ * Brand logo path.
+ *
+ * The repository ships with a faithful vector recreation of the institute
+ * logo at `/logo.svg` (lotus + book + wings + ribbon). To use a raster PNG
+ * instead, drop your file at `public/logo.png` and change this to
+ * `"/logo.png"`. Both formats are handled by `<Image />` automatically.
+ */
+export const logoSrc = "/logo.svg";
+
+/**
+ * Centralized image paths for institute photos.
  *
  * To swap a placeholder for the real photo, drop the JPG into
  * `public/gallery/` (e.g. `classroom-boys.jpg`) and replace the

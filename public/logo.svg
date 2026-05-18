@@ -1,46 +1,137 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" role="img" aria-label="Sure Success Coaching Centre">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" role="img" aria-label="Sure Success Coaching Centre">
   <defs>
-    <linearGradient id="ssccBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2563eb"/>
-      <stop offset="55%" stop-color="#1d4ed8"/>
+    <radialGradient id="badgeBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+    <linearGradient id="ribbonGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
       <stop offset="100%" stop-color="#0b1f4d"/>
     </linearGradient>
-    <linearGradient id="ssccGold" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fde68a"/>
-      <stop offset="60%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#d97706"/>
+    <linearGradient id="petalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
     </linearGradient>
-    <filter id="ssccShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0b1f4d" flood-opacity="0.35"/>
-    </filter>
+    <linearGradient id="wingGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#0b1f4d"/>
+    </linearGradient>
+    <path id="topArc" d="M 90 220 A 160 160 0 0 1 410 220" fill="none"/>
   </defs>
 
-  <!-- Shield -->
-  <path d="M44 4 L78 14 V42 C78 60 64 76 44 84 C24 76 10 60 10 42 V14 Z"
-        fill="url(#ssccBg)"/>
-  <!-- Inner shield ring -->
-  <path d="M44 9 L73 17.5 V42 C73 57.5 60.5 71.5 44 78.5 C27.5 71.5 15 57.5 15 42 V17.5 Z"
-        fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
-
-  <!-- Open book base -->
-  <g transform="translate(44 56)" filter="url(#ssccShadow)">
-    <path d="M-19 0 C-13 -3 -6 -3 0 0 C6 -3 13 -3 19 0 L19 8 C13 5 6 5 0 8 C-6 5 -13 5 -19 8 Z"
-          fill="#ffffff"/>
-    <path d="M0 0 V8" stroke="#cbd5e1" stroke-width="0.8"/>
+  <!-- ============ WINGS ============ -->
+  <g id="wings" fill="url(#wingGrad)">
+    <!-- Left wing -->
+    <path d="M 240 250
+             C 180 240 110 250 60 285
+             C 90 280 130 285 160 305
+             C 110 305 70 320 45 355
+             C 90 345 140 350 175 365
+             C 130 365 90 380 65 415
+             C 120 395 180 395 220 405
+             C 240 395 248 370 245 340
+             Z"/>
+    <!-- Wing feather lines (left) -->
+    <g stroke="#0b1f4d" stroke-width="1.2" fill="none" opacity="0.5">
+      <path d="M 240 270 C 200 275 165 285 130 305"/>
+      <path d="M 245 305 C 200 315 160 330 125 355"/>
+      <path d="M 245 345 C 200 360 160 380 130 405"/>
+    </g>
+    <!-- Right wing -->
+    <path d="M 360 250
+             C 420 240 490 250 540 285
+             C 510 280 470 285 440 305
+             C 490 305 530 320 555 355
+             C 510 345 460 350 425 365
+             C 470 365 510 380 535 415
+             C 480 395 420 395 380 405
+             C 360 395 352 370 355 340
+             Z"/>
+    <!-- Wing feather lines (right) -->
+    <g stroke="#0b1f4d" stroke-width="1.2" fill="none" opacity="0.5">
+      <path d="M 360 270 C 400 275 435 285 470 305"/>
+      <path d="M 355 305 C 400 315 440 330 475 355"/>
+      <path d="M 355 345 C 400 360 440 380 470 405"/>
+    </g>
   </g>
 
-  <!-- Star -->
-  <g transform="translate(44 22)">
-    <path d="M0 -10 L2.9 -3.1 L10.4 -2.4 L4.7 2.6 L6.4 10 L0 6 L-6.4 10 L-4.7 2.6 L-10.4 -2.4 L-2.9 -3.1 Z"
-          fill="url(#ssccGold)"/>
+  <!-- ============ CIRCULAR BADGE ============ -->
+  <!-- Outer circle -->
+  <circle cx="300" cy="200" r="170" fill="url(#badgeBg)" stroke="#1e3a8a" stroke-width="4"/>
+  <!-- Inner ring (text band) -->
+  <circle cx="300" cy="200" r="170" fill="none" stroke="#1e3a8a" stroke-width="1.5"/>
+  <circle cx="300" cy="200" r="135" fill="none" stroke="#1e3a8a" stroke-width="1.5"/>
+
+  <!-- Curved title text -->
+  <text font-family="'Poppins','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="22" letter-spacing="3" fill="#1e3a8a">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">SURE SUCCESS COACHING CENTRE</textPath>
+  </text>
+
+  <!-- ============ LOTUS ============ -->
+  <g id="lotus">
+    <!-- Back petals -->
+    <path d="M 300 215 C 245 200 220 160 235 115 C 260 130 285 165 300 200 Z" fill="url(#petalGrad)"/>
+    <path d="M 300 215 C 355 200 380 160 365 115 C 340 130 315 165 300 200 Z" fill="url(#petalGrad)"/>
+    <path d="M 300 215 C 250 195 235 150 260 105 C 280 130 300 170 300 200 Z" fill="#1d4ed8"/>
+    <path d="M 300 215 C 350 195 365 150 340 105 C 320 130 300 170 300 200 Z" fill="#1d4ed8"/>
+    <!-- Mid petals -->
+    <path d="M 300 215 C 270 200 260 155 285 100 C 300 140 305 175 300 200 Z" fill="#2563eb"/>
+    <path d="M 300 215 C 330 200 340 155 315 100 C 300 140 295 175 300 200 Z" fill="#2563eb"/>
+    <!-- Center petal (tallest) -->
+    <path d="M 300 215 C 290 195 290 150 300 90 C 310 150 310 195 300 215 Z" fill="#1e3a8a"/>
+    <!-- Petal highlights -->
+    <path d="M 300 95 C 296 140 296 185 300 200" stroke="#dbeafe" stroke-width="1.2" fill="none" opacity="0.7"/>
+    <path d="M 280 110 C 280 150 290 190 298 205" stroke="#dbeafe" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M 320 110 C 320 150 310 190 302 205" stroke="#dbeafe" stroke-width="1" fill="none" opacity="0.5"/>
+    <!-- Lotus base -->
+    <ellipse cx="300" cy="218" rx="38" ry="6" fill="#0b1f4d"/>
   </g>
 
-  <!-- SSCC monogram -->
-  <text x="44" y="46" text-anchor="middle"
-        font-family="'Poppins','Helvetica Neue',Arial,sans-serif"
-        font-weight="800" font-size="15" letter-spacing="1.2"
-        fill="#ffffff">SSCC</text>
+  <!-- ============ OPEN BOOK ============ -->
+  <g id="book" transform="translate(300 270)">
+    <!-- Book base/shadow -->
+    <path d="M -85 -8 C -55 -18 -25 -18 0 -8 C 25 -18 55 -18 85 -8 L 85 38 C 55 28 25 28 0 38 C -25 28 -55 28 -85 38 Z"
+          fill="#ffffff" stroke="#0b1f4d" stroke-width="2.5"/>
+    <!-- Spine -->
+    <path d="M 0 -8 L 0 38" stroke="#0b1f4d" stroke-width="2"/>
+    <!-- Left page lines -->
+    <g stroke="#0b1f4d" stroke-width="1.2" stroke-linecap="round">
+      <line x1="-75" y1="-2" x2="-8"  y2="-4"/>
+      <line x1="-75" y1="3"  x2="-8"  y2="1"/>
+      <line x1="-75" y1="8"  x2="-8"  y2="6"/>
+      <line x1="-75" y1="13" x2="-8"  y2="11"/>
+      <line x1="-75" y1="18" x2="-8"  y2="16"/>
+      <line x1="-75" y1="23" x2="-8"  y2="21"/>
+      <line x1="-75" y1="28" x2="-8"  y2="26"/>
+    </g>
+    <!-- Right page lines -->
+    <g stroke="#0b1f4d" stroke-width="1.2" stroke-linecap="round">
+      <line x1="8"  y1="-4" x2="75" y2="-2"/>
+      <line x1="8"  y1="1"  x2="75" y2="3"/>
+      <line x1="8"  y1="6"  x2="75" y2="8"/>
+      <line x1="8"  y1="11" x2="75" y2="13"/>
+      <line x1="8"  y1="16" x2="75" y2="18"/>
+      <line x1="8"  y1="21" x2="75" y2="23"/>
+      <line x1="8"  y1="26" x2="75" y2="28"/>
+    </g>
+  </g>
 
-  <!-- est. ribbon dot -->
-  <circle cx="44" cy="51" r="0.9" fill="#fbbf24"/>
+  <!-- ============ RIBBON ============ -->
+  <g id="ribbon">
+    <!-- Ribbon tails -->
+    <path d="M 90 405 L 130 390 L 130 425 L 110 435 Z" fill="#0b1f4d"/>
+    <path d="M 510 405 L 470 390 L 470 425 L 490 435 Z" fill="#0b1f4d"/>
+    <!-- Ribbon notches -->
+    <path d="M 90 405 L 110 415 L 90 425 Z" fill="#1e3a8a"/>
+    <path d="M 510 405 L 490 415 L 510 425 Z" fill="#1e3a8a"/>
+    <!-- Main ribbon -->
+    <path d="M 110 395 L 490 395 C 495 395 495 425 490 425 L 110 425 C 105 425 105 395 110 395 Z"
+          fill="url(#ribbonGrad)" stroke="#0b1f4d" stroke-width="1.5"/>
+    <!-- Sanskrit text -->
+    <text x="300" y="418" text-anchor="middle"
+          font-family="'Noto Sans Devanagari','Mangal','Sanskrit Text',serif"
+          font-weight="700" font-size="20" fill="#ffffff" letter-spacing="2">
+      सा विद्या या विमुक्तये
+    </text>
+  </g>
 </svg>
